@@ -4,7 +4,6 @@ import numpy as np
 import joblib
 
 def predict(parameters):
-    # ニューラルネットワークのモデルを読み込み
     reg = joblib.load("./nn.pkl")
     params = parameters.reshape(1,-1)
     pred = reg.predict(params)
