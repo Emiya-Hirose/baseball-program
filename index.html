@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<title>Baseball Predict App</title>
+<body>
+<style>
+  #wrapper {
+    text-aline: center;
+  }
+</style>
+
+<div id="wrapper">
+   {% for message in form.hit.errors %}
+      <div>{{ message }}</div>
+   {% endfor %}
+
+   {% for message in form.basehit.errors %}
+      <div>{{ message }}</div>
+   {% endfor %}
+
+   {% for message in form.OnBasePercentage.errors %}
+      <div>{{ message }}</div>
+   {% endfor %}
+
+   {% for message in form.OPS.errors %}
+      <div>{{ message }}</div>
+   {% endfor %}
+
+   {% for message in form.ScoringPositionBattingAverage.errors %}
+      <div>{{ message }}</div>
+   {% endfor %}
+
+   <form method="post">
+      {{ form.hit.label }}<br>
+      {{ form.hit }}
+      <br>
+      {{ form.basehit.label }}<br>
+      {{ form.basehit }}
+      <br>
+      {{ form.OnBasePercentage.label }}<br>
+      {{ form.OnBasePercentage }}
+      <br>
+      {{ form.OPS.label }}<br>
+      {{ form.OPS }}
+      <br>
+      <br>
+      {{ form.ScoringPositionBattingAverage.label }}<br>
+      {{ form.ScoringPositionBattingAverage }}
+      <br>
+      {{ form.submit }}
+    </form>
+  </div>
+</body>
+</html>
